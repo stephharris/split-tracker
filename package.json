@@ -1,0 +1,26 @@
+{
+  "name": "split-tracker",
+  "version": "1.0.0",
+  "description": "A simple tool for calculating running track splits.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephharris/split-tracker.git"
+  },
+  "keywords": [
+    "track",
+    "split",
+    "splits",
+    "running",
+    "calculator"
+  ],
+  "author": "steph harris",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stephharris/split-tracker/issues"
+  },
+  "homepage": "https://github.com/stephharris/split-tracker#readme",
+}
