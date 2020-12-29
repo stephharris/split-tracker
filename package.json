@@ -1,8 +1,8 @@
 {
   "name": "split-tracker",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A simple JS library for calculating running track split times.",
-  "main": "dist/bundle.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "jest",
     "build": "webpack --mode production",
