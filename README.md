@@ -16,5 +16,5 @@ $ yarn add split-tracker
 
 or add it directly to your webpage using a CDN:
 ```
-<script src="" data-split-tracker><script/>
+<script src="" data-split-tracker></script>
 ```
