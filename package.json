@@ -1,10 +1,12 @@
 {
   "name": "split-tracker",
   "version": "1.0.0",
-  "description": "A simple tool for calculating running track splits.",
-  "main": "index.js",
+  "description": "A simple JS library for calculating running track split times.",
+  "main": "dist/bundle.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "webpack --mode production",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -15,9 +17,12 @@
     "split",
     "splits",
     "running",
-    "calculator"
+    "calculate",
+    "mile",
+    "kilometer",
+    "pace"
   ],
-  "author": "steph harris",
+  "author": "Steph Harris",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/stephharris/split-tracker/issues"
@@ -27,6 +32,9 @@
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "babel-jest": "^26.6.3",
-    "jest": "^26.6.3"
+    "babel-loader": "^8.2.2",
+    "jest": "^26.6.3",
+    "webpack": "^5.11.1",
+    "webpack-cli": "^4.3.0"
   }
 }
