@@ -4,5 +4,5 @@ package-lock.json
 webpack.config.js
 babel.config.js
 
-src/
 test-project/
+src/index.test.js
