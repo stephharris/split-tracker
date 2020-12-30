@@ -17,7 +17,7 @@ $ yarn add split-tracker
 or add it directly to your webpage using a CDN:
 ```
 <head>
-	<script src="https://cdn.jsdelivr.net/npm/split-tracker@1.0.5/dist/index.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/split-tracker@1.0.5/dist/index.min.js"></script>
 </head>
 ```
 
@@ -46,17 +46,17 @@ splitTracker.calculateSplitByKilometerTime('3:30', 400)
 ```
 	
 <html> 
-	<head>
-		<script src="https://cdn.jsdelivr.net/npm/split-tracker@1.0.4/dist/index.min.js"></script>
-	</head>
+<head>
+<script src="https://cdn.jsdelivr.net/npm/split-tracker@1.0.4/dist/index.min.js"></script>
+</head>
 </html>
 
 
 // inside of js file (or script tag)
 document.querySelector("body").onload = function() {
-	var split = splitTracker.calculateSplitByMileTime(6, 200);
+var split = splitTracker.calculateSplitByMileTime(6, 200);
 
-	console.log('split: ', split)
+console.log('split: ', split)
 }
 
 ```
