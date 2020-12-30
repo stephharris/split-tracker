@@ -15,7 +15,7 @@ $ yarn add split-tracker
 ```
 
 or add it directly to your webpage using a CDN:
-```
+```html
 	<head>
 		<script src="https://cdn.jsdelivr.net/npm/split-tracker@1.0.5/dist/index.min.js"></script>
 	</head>
@@ -25,7 +25,7 @@ if you are working off an older version of the CDN, simply replace split-tracker
 
 ## Implementing:
 
-```
+```javascript
 
 	const splitTracker = require('split-tracker');
 
@@ -33,7 +33,7 @@ if you are working off an older version of the CDN, simply replace split-tracker
 
 ```
 
-```
+```javascript
 
 	import { calculateSplitByMileTime, calculateSplitByKilometerTime } from 'split-tracker';
 
@@ -43,7 +43,7 @@ if you are working off an older version of the CDN, simply replace split-tracker
 
 ```
 
-```
+```html
 	
 	<html> 
 		<head>
@@ -63,7 +63,7 @@ if you are working off an older version of the CDN, simply replace split-tracker
 ## API:
 
 ### convertSecondsToMMSS
-```
+```javascript
 		
 	const seconds = 6.5; 
 
@@ -72,7 +72,7 @@ if you are working off an older version of the CDN, simply replace split-tracker
 ```
 
 ### convertMMSSToSeconds
-```
+```javascript
 		
 	const time = '15:30';
 
@@ -81,7 +81,7 @@ if you are working off an older version of the CDN, simply replace split-tracker
 ```
 
 ### convertMinutesInDecimalsToMMSS
-```
+```javascript
 		
 	const minutes = 1.512;
 
@@ -90,7 +90,7 @@ if you are working off an older version of the CDN, simply replace split-tracker
 ```
 
 ### calculateSplitByMileTime
-```
+```javascript
 		
 	const mileTime = '6:00'; 
 	// may be a formatted string (mm:ss) or a valid number (e.g. 6 or 6.0)
@@ -104,7 +104,7 @@ if you are working off an older version of the CDN, simply replace split-tracker
 ```
 
 ### calculateSplitByKilometerTime
-```
+```javascript
 		
 	const kilometerTime = '3:30'; 
 	// may be a formatted string (mm:ss) or a valid number (e.g. 3.5)
