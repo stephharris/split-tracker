@@ -1,6 +1,6 @@
 {
   "name": "split-tracker",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A simple JS library for calculating running track split times.",
   "main": "src/index.js",
   "scripts": {

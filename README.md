@@ -27,37 +27,37 @@ if you are working off an older version of the CDN, simply replace split-tracker
 
 ```
 
-	const splitTracker = require('split-tracker');
+const splitTracker = require('split-tracker');
 
-	splitTracker.calculateSplitByMileTime(6, 200);
-
-```
+splitTracker.calculateSplitByMileTime(6, 200);
 
 ```
 
-	import { calculateSplitByMileTime, calculateSplitByKilometerTime } from 'split-tracker';
+```
 
-	splitTracker.calculateSplitByMileTime(6, 200);
+import { calculateSplitByMileTime, calculateSplitByKilometerTime } from 'split-tracker';
 
-	splitTracker.calculateSplitByKilometerTime('3:30', 400)
+splitTracker.calculateSplitByMileTime(6, 200);
+
+splitTracker.calculateSplitByKilometerTime('3:30', 400)
 
 ```
 
 ```
 	
-	<html> 
-		<head>
-			<script src="https://cdn.jsdelivr.net/npm/split-tracker@1.0.4/dist/index.min.js"></script>
-		</head>
-	</html>
-	
+<html> 
+	<head>
+		<script src="https://cdn.jsdelivr.net/npm/split-tracker@1.0.4/dist/index.min.js"></script>
+	</head>
+</html>
 
-	// inside of js file (or script tag)
-	document.querySelector("body").onload = function() {
-  	var split = splitTracker.calculateSplitByMileTime(6, 200);
 
-  	console.log('split: ', split)
-	}
+// inside of js file (or script tag)
+document.querySelector("body").onload = function() {
+	var split = splitTracker.calculateSplitByMileTime(6, 200);
+
+	console.log('split: ', split)
+}
 
 ```
 
