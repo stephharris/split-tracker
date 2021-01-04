@@ -132,7 +132,7 @@ const calculateSplitByKilometerTime = (kmPace: any, splitDistance: number): Spli
 	};
 }
 
-module.exports = {
+export {
 	convertSecondsToMMSS,
 	convertMMSSToSeconds,
 	convertMinutesInDecimalsToMMSS,
