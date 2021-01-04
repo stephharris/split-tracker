@@ -2,18 +2,18 @@
 
 /// HELPER FUNCTIONS ///
 
-const isValidNumber = (value) => {
+const isValidNumber = (value: any): boolean  => {
 	return Boolean(typeof value === 'number' && value >= 0)
 }
 
-const isInMMSSFormat = (value) => {
+const isInMMSSFormat = (value: any): boolean => {
 	const regex = /(\d?\d?):(\d?\d?)/
 	const matches = value.match(regex)
 
 	return Boolean(matches)
 }
 
-const convertMinutesToSeconds = (min) => {
+const convertMinutesToSeconds = (min: any): any => {
 	// accepts as '6.5', 6.512, '6:30'
 
 	if(isValidNumber(min)) {
@@ -32,7 +32,7 @@ const convertMinutesToSeconds = (min) => {
 	return null;
 }
 
-const convertSecondsToMinutes = (sec) => {
+const convertSecondsToMinutes = (sec: any): any => {
 	// will return a decimal
 	if(!isValidNumber(sec)) return null
 
@@ -42,7 +42,12 @@ const convertSecondsToMinutes = (sec) => {
 
 /// EXPORTED FUNCTIONS ///
 
-const convertMMSSToSeconds = (value) => {
+interface Split {
+	precise_split: number,
+	formatted_split: string
+}
+
+const convertMMSSToSeconds = (value: any): number => {
 	if(!value || isValidNumber(value)) {
 		throw new Error('Value not in MM:SS format.')
 	} 
@@ -60,7 +65,7 @@ const convertMMSSToSeconds = (value) => {
 	}
 }
 
-const convertMinutesInDecimalsToMMSS = (value) => {
+const convertMinutesInDecimalsToMMSS = (value: any): any => {
 	if(!value || !isValidNumber(value)) {
 		throw new Error('Value invalid.')
 	} 
@@ -69,14 +74,10 @@ const convertMinutesInDecimalsToMMSS = (value) => {
 	const matches = (value.toString()).match(regex);
 
 	if(matches) {
-		let minutes = Number(matches[1]) || 0
-		let seconds = Math.round((Number(matches[2]) * 60) * 100 / 100) || 0
+		let minutes: string | number = Number(matches[1]) || ''
+		let seconds: string | number = Math.round((Number(matches[2]) * 60) * 100 / 100) || 0
 
-		if(minutes === 0) {
-			minutes = ''
-		}
-
-		if(seconds.toString().length === 1) {
+		if(seconds >= 0 && seconds < 10) {
 			seconds = `0${seconds}`
 		}
 
@@ -86,7 +87,7 @@ const convertMinutesInDecimalsToMMSS = (value) => {
 	}
 }
 
-const convertSecondsToMMSS = (value) => {
+const convertSecondsToMMSS = (value: any): any => {
 	const numericalValue = Number(value);
 
 	if(!isValidNumber(numericalValue)) return null
@@ -101,7 +102,7 @@ const convertSecondsToMMSS = (value) => {
 }
 
 
-const calculateSplitByMileTime = (milePace, splitDistance) => {
+const calculateSplitByMileTime = (milePace: any, splitDistance: number): Split => {
 	const milePaceInSeconds = convertMinutesToSeconds(milePace);
 
 	if(!isValidNumber(milePaceInSeconds) || !isValidNumber(splitDistance)) {
@@ -116,7 +117,7 @@ const calculateSplitByMileTime = (milePace, splitDistance) => {
 	};
 }
 
-const calculateSplitByKilometerTime = (kmPace, splitDistance) => {
+const calculateSplitByKilometerTime = (kmPace: any, splitDistance: number): Split => {
 	const kmPaceInSeconds = convertMinutesToSeconds(kmPace);
 
 	if(!isValidNumber(kmPaceInSeconds) || !isValidNumber(splitDistance)) {

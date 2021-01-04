@@ -17,7 +17,7 @@ $ yarn add split-tracker
 or add it directly to your webpage using a CDN:
 ```html
 <head>
-	<script src="https://cdn.jsdelivr.net/npm/split-tracker@1.0.6/dist/index.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/split-tracker@1.0.7/dist/index.min.js"></script>
 </head>
 ```
 
@@ -50,7 +50,7 @@ Using the CDN:
 	
 <html> 
 	<head>
-		<script src="https://cdn.jsdelivr.net/npm/split-tracker@1.0.4/dist/index.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/split-tracker@1.0.7/dist/index.min.js"></script>
 	</head>
 </head>
 
@@ -107,6 +107,7 @@ const splitDistance = 200;
 
 calculateSplitByMileTime(mileTime, splitDistance); 
 // => { precise_split: 44.74, formatted_split: ':45' }
+// yields both the precise_split time in seconds and a rounded, formatted split in MM:SS
 
 ```  
 ##
@@ -122,5 +123,6 @@ const splitDistance = 5000;
 
 calculateSplitByKilometerTime(kilometerTime, splitDistance); 
 // => { precise_split: 1050, formatted_split: '17:30' }
+// yields both the precise_split time in seconds and a rounded, formatted split in MM:SS
 
 ```
